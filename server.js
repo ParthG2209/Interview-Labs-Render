@@ -678,6 +678,18 @@ app.use((err, req, res, next) => {
 app.use((req, res) => {
     res.status(404).json({ error: 'Route not found' });
 });
+// Support both /api/analyze and /api/analyze/video for compatibility
+app.post('/api/analyze', upload.single('video'), (req, res) => {
+    console.log('📹 /api/analyze called - redirecting to video analysis');
+    
+    // Call the same handler as /api/analyze/video
+    req.url = '/api/analyze/video';
+    req.originalUrl = '/api/analyze/video';
+    
+    // Re-route to the video analysis handler
+    app._router.handle(req, res);
+});
+
 
 app.listen(PORT, () => {
     console.log(`🚀 InterviewLabs server running on port ${PORT}`);
