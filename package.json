@@ -1,23 +1,20 @@
 {
   "name": "interviewlabs",
   "version": "1.0.0",
+  "description": "AI-powered interview practice lab with real video analysis",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
-    "build": "echo 'No build required'",
-    "dev": "node server.js"
+    "dev": "nodemon server.js",
+    "build": "echo 'No build step required'"
   },
   "dependencies": {
-    "cors": "^2.8.5",
-    "dotenv": "^16.3.1",
     "express": "^4.18.2",
-    "formidable": "^3.5.4",
-    "morgan": "^1.10.0",
-    "multer": "^1.4.4",
-    "uuid": "^9.0.1"
+    "multer": "^1.4.5-lts.1",
+    "formidable": "^3.5.1",
+    "cors": "^2.8.5"
   },
   "engines": {
-    "node": "22.x"
-  },
-  "type": "module"
+    "node": ">=18.0.0"
+  }
 }
