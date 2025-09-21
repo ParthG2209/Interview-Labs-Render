@@ -36,5 +36,3 @@ This project is a **video-only** Smart Interview Analyzer. It:
 - Transcription runs using local Whisper via a Python script `transcribe_whisper.py` which outputs a JSON transcript with timestamps.
 - The server calls that script; ensure your Python environment has Whisper installed.
 - If Cohere key is missing, the server falls back to a built-in heuristic analysis.
-
-# Interview-Labs-Render
