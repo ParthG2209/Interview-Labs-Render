@@ -1,5 +1,5 @@
 
-# InterviewLabs
+# Interview-Labs
 
 This project is a **video-only** Smart Interview Analyzer. It:
 - Generates interview questions for a given field.
